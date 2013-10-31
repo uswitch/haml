@@ -53,7 +53,6 @@ module Haml
     def precompiled_with_ambles(local_names)
       preamble = <<END.tr("\n", ';')
 begin
-extend Haml::Helpers
 _hamlout = @haml_buffer = Haml::Buffer.new(haml_buffer, #{options.for_buffer.inspect})
 _erbout = _hamlout.buffer
 @output_buffer = output_buffer ||= ActionView::OutputBuffer.new rescue nil
